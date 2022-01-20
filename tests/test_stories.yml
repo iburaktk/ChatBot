@@ -1,0 +1,91 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+  - story: mutlu yol 1
+    steps:
+      - user: |
+          Merhaba
+        intent: selam
+      - action: utter_selam_al
+      - user: |
+          Harika
+        intent: iyi
+      - action: utter_mutlu
+
+  - story: mutlu yol 2
+    steps:
+      - user: |
+          Selamlar
+        intent: selam
+      - action: utter_selam_al
+      - user: |
+          Harika
+        intent: iyi
+      - action: utter_mutlu
+      - user: |
+          Görüşürüz
+        intent: veda_et
+      - action: utter_veda
+
+  - story: üzgün yol 1
+    steps:
+      - user: |
+          Selam
+        intent: selam
+      - action: utter_selam_al
+      - user: |
+          kötüyüm
+        intent: kötü
+      - action: utter_moral_düzelt
+      - action: utter_moral_düzeldi_mi
+      - user: |
+          Evet
+        intent: onay
+      - action: utter_mutlu
+
+  - story: üzgün yol 2
+    steps:
+      - user: |
+          Selamunaleyküm
+        intent: selam
+      - action: utter_selam_al
+      - user: |
+          Moralim bozuk
+        intent: kötü
+      - action: utter_moral_düzelt
+      - action: utter_moral_düzeldi_mi
+      - user: |
+          maalesef
+        intent: red
+      - action: utter_veda
+
+  - story: üzgün yol 3
+    steps:
+      - user: |
+          Naber
+        intent: selam
+      - action: utter_selam_al
+      - user: |
+          Çok kötü
+        intent: kötü
+      - action: utter_moral_düzelt
+      - action: utter_moral_düzeldi_mi
+      - user: |
+          yok
+        intent: red
+      - action: utter_veda
+
+  - story: Vedalaş
+    steps:
+      - user: |
+          Hoşçakal
+        intent: veda_et
+      - action: utter_veda
+
+  - story: Robot itiraf
+    steps:
+      - user: |
+          Kimsin sen?
+        intent: bot_mu
+      - action: utter_bot

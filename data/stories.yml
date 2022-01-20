@@ -1,0 +1,26 @@
+version: "2.0"
+stories:
+- story: mutlu yol
+  steps:
+  - intent: selam
+  - action: utter_selam_al
+  - intent: iyi
+  - action: utter_mutlu
+- story: üzgün yol 1
+  steps:
+  - intent: selam
+  - action: utter_selam_al
+  - intent: kötü
+  - action: utter_moral_düzelt
+  - action: utter_moral_düzeldi_mi
+  - intent: onay
+  - action: utter_mutlu
+- story: üzgün yol 2
+  steps:
+  - intent: selam
+  - action: utter_selam_al
+  - intent: kötü
+  - action: utter_moral_düzelt
+  - action: utter_moral_düzeldi_mi
+  - intent: red
+  - action: utter_veda

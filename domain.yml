@@ -1,0 +1,26 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- selam
+- veda_et
+- bot_mu
+- iyi
+- kötü
+- onay
+- red
+responses:
+  utter_selam_al:
+  - text: Merhaba. Nasılsın?
+  utter_moral_düzelt:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Umarım bu resim moralini düzeltir:'
+  utter_moral_düzeldi_mi:
+  - text: Yardımcı olabildim mi?
+  utter_mutlu:
+  - text: Mutlu olmana sevindim
+  utter_veda:
+  - text: Hoşçakal
+  utter_bot:
+  - text: Rasa ile oluşturulmuş bir botum.

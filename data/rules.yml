@@ -1,0 +1,14 @@
+version: "2.0"
+rules:
+- rule: Verilen selamı almak farzdır
+  steps:
+  - intent: selam
+  - action: utter_selam_al
+- rule: Vedalaş
+  steps:
+  - intent: veda_et
+  - action: utter_veda
+- rule: Robot olduğunu itiraf et
+  steps:
+  - intent: bot_mu
+  - action: utter_bot
