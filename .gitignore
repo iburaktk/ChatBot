@@ -1,0 +1,16 @@
+*.json
+/models
+*.pyc
+
+# Created by Rasa
+.rasactl
+
+# Visual Studio Code
+.vscode/
+.ionide/
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea/
