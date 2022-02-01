@@ -4,6 +4,7 @@
 
 # Created by Rasa
 .rasactl
+.rasa/
 
 # Visual Studio Code
 .vscode/
